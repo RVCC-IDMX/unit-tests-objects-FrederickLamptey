@@ -88,7 +88,15 @@ const colorHexCodes = {
  * must use colorHexCodes as a lookup table
  */
 function getColorValue(color) {
-  // write your code here & return value
+  const colorlist = Object.keys(colorHexCodes);
+  const hexlist = Object.values(colorHexCodes);
+  let colorname;
+  for (let i = 0; i < colorlist.length; i += 1) {
+    if (colorlist[i] === color) {
+      colorname = hexlist[i];
+    }
+  }
+  return colorname;
 }
 
 /**
@@ -110,6 +118,7 @@ function getColorValue(color) {
  */
 function testForColor(color) {
   // write your code here & return value
+  return colorHexCodes.hasOwnProperty(color);
 }
 
 module.exports = {

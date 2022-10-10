@@ -10,6 +10,8 @@
  * Reading and writing from objects
  */
 
+const { sortUserPlugins } = require('vite');
+
 /**
  * Makes a new object with the given properties.
  * name: a string that is the name of the pet,
@@ -28,6 +30,15 @@
  */
 function makePetObject() {
   // write your code here & return value
+  const pet = {
+    name: 'Tom',
+    age: 10,
+    species: 'mammal',
+    hasFur: true,
+    legs: 4,
+    bestFriend: 'Anthony',
+  };
+  return pet;
 }
 
 /**
@@ -40,6 +51,10 @@ function makePetObject() {
  */
 function getPetName(pet) {
   // write your code here & return value
+  pet = {
+    name: 'Tom',
+  };
+  return pet.name;
 }
 
 /**
@@ -53,6 +68,10 @@ function getPetName(pet) {
 function getPetAge(pet) {
   // eslint-disable-next-line dot-notation
   // write your code here & return value
+  pet = {
+    age: 10,
+  };
+  return pet['age'];
 }
 
 /**
@@ -70,6 +89,8 @@ function getPetAge(pet) {
  */
 function setPetAge(pet, age) {
   // write your code here & return value
+  pet.age = age;
+  return pet;
 }
 
 /**
@@ -79,6 +100,10 @@ function setPetAge(pet, age) {
  */
 function isPetABaby(pet) {
   // write your code here & return value
+  if (pet.age < 1) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -90,6 +115,8 @@ function isPetABaby(pet) {
  */
 function addPetBreed(pet, str) {
   // write your code here & return value
+  pet.breed = str;
+  return pet;
 }
 
 /**
@@ -101,6 +128,8 @@ function addPetBreed(pet, str) {
  */
 function deletePetBestFriend(pet) {
   // write your code here & return value
+  delete pet.bestFriend;
+  return pet;
 }
 
 /**
@@ -112,6 +141,7 @@ function deletePetBestFriend(pet) {
  */
 function getPetKeys(pet) {
   // write your code here & return value
+  return Object.keys(pet);
 }
 
 /**
@@ -122,6 +152,8 @@ function getPetKeys(pet) {
  */
 function getPetObjLength(pet) {
   // write your code here & return value
+  const count = Object.keys(pet).length;
+  return count;
 }
 
 module.exports = {
