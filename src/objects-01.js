@@ -10,8 +10,6 @@
  * Reading and writing from objects
  */
 
-const { sortUserPlugins } = require('vite');
-
 /**
  * Makes a new object with the given properties.
  * name: a string that is the name of the pet,
